@@ -11,28 +11,33 @@ package model;
  */
 public class Calculos {
 
-    private double x = 1.1;
-    private double dof = 9;
-    private double E = 0.00001;
+    private double x;
+    private double dof;
+    private static double E = 0.00001;
     private double num_seg = 10;
     private double w;
 
     private int r;
     private double f1;
+    private double p;
 
-    public Calculos(double x) {
+    public Calculos(double x, double dof) {
         this.x = x;
+        this.dof = dof;
         this.w = this.x / this.num_seg;
         this.calF1();
         double sumatorias = 0.0;
         for (int i = 0; i <= this.num_seg; i++) {
             sumatorias += this.getMultiplicador(getF(this.w * i), i);
         }
-        double p = (this.w/3)*sumatorias;
-        System.out.println("p=" + p);
+        this.p = (this.w/3)*sumatorias;
+    
 
     }
 
+    public double getP(){
+        return this.p;
+    }
     private void calF1() {
         double r1 = calR((this.dof + 1) / 2);
         double r2 = calR(this.dof / 2);

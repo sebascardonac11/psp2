@@ -26,32 +26,22 @@ public class MainView {
 
         PrintWriter pw = resp.getWriter();
         pw.write("<html>");
-        pw.println("<h1>PSP1.1 Program 4</h1>");
+        pw.println("<h1>PSP2.0 Program 5</h1>");
         pw.println("<h2>Sebastian Cardona Correa</h2>");
-        
-        pw.println("<p>Test1 - LOC/Method:</p>");
-        pw.println("<p>6.0000-6.0000-8.3333-10.3333-12.3333-16.4000-20.5000-21.7500-22.2500-23.0000-28.3333-29.0000-55.8000</p>");
-        
-        pw.println("<p>Test2 - Pgs/Chapter:</p>");
-        pw.println("<p>12-10-12-10-12-12-12-12-8-8-8-20-14-18-12</p>");
-
+        pw.println("<h2>E:0.00001</h2>");
         pw.write("<form action=\"calc\" method=\"post\"> \n"
-                + "    <input type=\"text\" name=\"lst1\"  value=\"6.0000-6.0000-8.3333-10.3333-12.3333-16.4000-20.5000-21.7500-22.2500-23.0000-28.3333-29.0000-55.8000\">\n"
-                
+                + " <p> x </p>   <input type=\"text\" name=\"lst1\"  value=\"1.1\">\n"
+                + " <p> dof </p> <input type=\"text\" name=\"lst2\"  value=\"9\">\n"
                 + "    <input type=\"submit\" value=\"Calc\">\n"
                 + "</form> ");
 
         pw.write("</html>");
-
     }
 
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp, Double VS, Double S, Double M, Double L, Double VL)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp, Double P)
             throws ServletException, IOException {
-        resp.getWriter().println("<b>VS:</b> " + VS + "<br>");
-        resp.getWriter().println("<b>S :</b> " + S + "<br>");
-        resp.getWriter().println("<b>M : </b> " + M + "<br>");
-        resp.getWriter().println("<b>L :</b> " + L + "<br>");
-        resp.getWriter().println("<b>VL: </b> " + VL + "<br>");
+        resp.getWriter().println("<b>P:</b> " + P + "<br>");
+
     }
 
     public static void error(HttpServletRequest req, HttpServletResponse resp)

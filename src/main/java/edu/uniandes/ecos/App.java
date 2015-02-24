@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
         double x=1.1;
-       Calculos cal =new Calculos(x);
+       Calculos cal =new Calculos(x,9);
         System.out.println( "Hello World!" );
         /*
         x =1.1
