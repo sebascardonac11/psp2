@@ -1,9 +1,9 @@
-Mi primer proyecto PSP 11
+Mi primer proyecto PSP 2.0
 
 GITHUB
-	URL: https://github.com/sebascardonac11/psp11
+	URL: https://github.com/sebascardonac11/psp2
 	User:	sebascardonac11
 
 Heroku
-	URL: placebopsp11.herokuapp.com
+	URL:https://placebopsp20.herokuapp.com/
 	User: sebascardonac11@gmail.com
