@@ -14,7 +14,7 @@ public class Calculos {
     private double x;
     private double dof;
     private static double E = 0.00001;
-    private double num_seg = 10;
+    private double num_seg;
     private double w;
 
     private int r;
@@ -25,9 +25,10 @@ public class Calculos {
      * @param x Rango final para calcular la ecuacion.
      * @param dof Cantidad de grados de libertad.
      */
-    public Calculos(double x, double dof) {
+    public Calculos(double x, double dof, double num_seg) {
         this.x = x;
         this.dof = dof;
+        this.num_seg=num_seg;
         this.w = this.x / this.num_seg;
         this.calF1();
         double sumatorias = 0.0;

@@ -32,6 +32,7 @@ public class MainView {
         pw.write("<form action=\"calc\" method=\"post\"> \n"
                 + " <p> x </p>   <input type=\"text\" name=\"lst1\"  value=\"1.1\">\n"
                 + " <p> dof </p> <input type=\"text\" name=\"lst2\"  value=\"9\">\n"
+                + " <p> Numero de Segmento </p> <input type=\"text\" name=\"lst3\"  value=\"10\">\n"
                 + "    <input type=\"submit\" value=\"Calc\">\n"
                 + "</form> ");
 

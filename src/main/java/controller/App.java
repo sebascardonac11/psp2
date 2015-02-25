@@ -63,7 +63,8 @@ public class App extends HttpServlet {
     public void consoleInput(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         String lst1 = req.getParameter("lst1");
         String lst2 = req.getParameter("lst2");
-        Calculos cal = new Calculos(Double.parseDouble(lst1), Double.parseDouble(lst2));
+        String lst3 = req.getParameter("lst3");
+        Calculos cal = new Calculos(Double.parseDouble(lst1), Double.parseDouble(lst2),Double.parseDouble(lst3));
         MainView.showResults(req, resp, cal.getP());
     }
 }
