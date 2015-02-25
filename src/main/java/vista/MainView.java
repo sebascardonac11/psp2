@@ -39,8 +39,11 @@ public class MainView {
         pw.write("</html>");
     }
 
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp, Double P)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp,Double x, Double dof,Double seg ,Double P)
             throws ServletException, IOException {
+        resp.getWriter().println("<b>x:</b> " + x + "<br>");
+        resp.getWriter().println("<b>dof:</b> " + dof + "<br>");
+        resp.getWriter().println("<b>segmento:</b> " + seg + "<br>");
         resp.getWriter().println("<b>P:</b> " + P + "<br>");
 
     }
